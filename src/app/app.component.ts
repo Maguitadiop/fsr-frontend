@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'contact-frontend';
+  title: string;
+
+  constructor() {
+    this.title = 'Gestion de contact';
+  }
 }

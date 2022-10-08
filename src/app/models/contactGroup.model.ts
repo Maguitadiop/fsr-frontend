@@ -1,4 +1,4 @@
 export class ContactGroup {
-  groupId?: long;
+  groupId?: number;
   groupName?: string;
 }

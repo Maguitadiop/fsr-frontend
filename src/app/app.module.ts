@@ -4,12 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ContactService } from './services/contact.service';
+import { DeleteContactComponent } from './components/delete-contact/delete-contact.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent
+    ContactComponent,
+    DeleteContactComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +20,7 @@ import { ContactComponent } from './components/contact/contact.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

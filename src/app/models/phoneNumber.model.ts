@@ -1,7 +1,7 @@
-import {Contact} from './models/contact.model'
+import {Contact} from './contact.model'
 
-export class phoneNumber {
-  idPhone?: long;
+export class PhoneNumber {
+  idPhone?: number;
   phoneNumber?: string;
   phoneKind?: string;
   contact?: Contact;

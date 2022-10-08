@@ -1,9 +1,9 @@
-import {Address} from './models/address.model'
-import {ContactGroup} from './models/contactGroup.model'
-import {PhoneNumber} from './models/phoneNumber.model'
+import {Address} from './address.model'
+import {ContactGroup} from './contactGroup.model'
+import {PhoneNumber} from './phoneNumber.model'
 
 export class Contact {
-  idContact?: int;
+  idContact?: number;
   firstName?: string;
   lastName?: string;
   Email?: string
