@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { ContactService } from './services/contact.service';
 import { DeleteContactComponent } from './components/delete-contact/delete-contact.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ListContactComponent } from './components/list-contact/list-contact.component';
+import { UpdateContactComponent } from './components/update-contact/update-contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
-    DeleteContactComponent
+    DeleteContactComponent,
+    ListContactComponent,
+    UpdateContactComponent
   ],
   imports: [
     BrowserModule,

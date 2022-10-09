@@ -11,7 +11,11 @@ export class ContactService {
   private apiServerUrl = environment.apiBaseUrl;
   constructor(private http: HttpClient) {}
 
+  getContactList(): Observable<any> {  
+    return this.http.get(`${this.apiServerUrl}`+'/find/all');  
+  }  
+
   public deleteContact(contactId:number): Observable<any> {
-    return this.http.delete<any>(`${this.apiServerUrl}/carnetcontac/delete/${contactId}`);
+    return this.http.delete<any>(`${this.apiServerUrl}/delete/${contactId}`);
   }
 }
