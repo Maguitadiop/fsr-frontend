@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:8080/carnetcontac'
+  apiBaseUrl: 'http://localhost:8080/carnetcontact'
 };
 
 /*

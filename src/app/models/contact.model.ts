@@ -6,7 +6,7 @@ export class Contact {
   idContact?: number;
   firstName?: string;
   lastName?: string;
-  Email?: string
+  email?: string
   address?: Address;
   contactGroups?: Set<ContactGroup>;
   phones?: Set<PhoneNumber>;

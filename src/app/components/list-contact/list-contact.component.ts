@@ -4,6 +4,7 @@ import { ContactService } from 'src/app/services/contact.service';
   
 import {FormControl,FormGroup,Validators} from '@angular/forms';  
 import { Contact } from 'src/app/models/contact.model';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-list-contact',
@@ -12,13 +13,24 @@ import { Contact } from 'src/app/models/contact.model';
 })
 export class ListContactComponent implements OnInit {
 
+  public contacts: Contact[] = [];
+
   constructor(private contactService:ContactService) { }
 
-  contacts: any[] = [];
-  ngOnInit(): void {
-    this.contactService.getContactList().subscribe(data =>{
-      this.contacts = data;
-    })
+  ngOnInit(){
+    this.getContacts();
+  }
+
+
+  public getContacts():void{
+    this.contactService.getContactList().subscribe(
+      (Response:Contact[])=>{
+        this.contacts = Response;
+      },
+      (error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    )
   }
 
 }
